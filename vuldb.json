@@ -1,0 +1,602 @@
+{
+   "name": "vuldb",
+   "author": "z1p",
+   "version": 0.1,
+   "categories": [],
+   "description": "",
+   "icon": null,
+   "requirements": {
+      "jimi_min_version": null,
+      "jimi_max_version": null,
+      "plugins": []
+   },
+   "collections": {},
+   "triggers": {},
+   "actions": {
+      "vuldbGetVulnerability": {
+         "display_name": "vuldbGetVulnerability",
+         "className": "_vuldbGetVulnerability",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiToken",
+               "schema_value": "apiToken",
+               "type": "input",
+               "label": "apiToken",
+               "description": ""
+            },
+            {
+               "schema_item": "vuldbID",
+               "schema_value": "vuldbID",
+               "type": "input",
+               "label": "vuldbID",
+               "description": ""
+            },
+            {
+               "schema_item": "limit",
+               "schema_value": "limit",
+               "type": "input",
+               "label": "limit",
+               "description": ""
+            },
+            {
+               "schema_item": "sort",
+               "schema_value": "sort",
+               "type": "input",
+               "label": "sort",
+               "description": ""
+            },
+            {
+               "schema_item": "fields",
+               "schema_value": "fields",
+               "type": "json-input",
+               "label": "fields",
+               "description": ""
+            },
+            {
+               "schema_item": "details",
+               "schema_value": "details",
+               "type": "checkbox",
+               "label": "details",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "vuldbGetRecent": {
+         "display_name": "vuldbGetRecent",
+         "className": "_vuldbGetRecent",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiToken",
+               "schema_value": "apiToken",
+               "type": "input",
+               "label": "apiToken",
+               "description": ""
+            },
+            {
+               "schema_item": "amount",
+               "schema_value": "amount",
+               "type": "input",
+               "label": "amount",
+               "description": ""
+            },
+            {
+               "schema_item": "limit",
+               "schema_value": "limit",
+               "type": "input",
+               "label": "limit",
+               "description": ""
+            },
+            {
+               "schema_item": "sort",
+               "schema_value": "sort",
+               "type": "input",
+               "label": "sort",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "vuldbGetUpdates": {
+         "display_name": "vuldbGetUpdates",
+         "className": "_vuldbGetUpdates",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiToken",
+               "schema_value": "apiToken",
+               "type": "input",
+               "label": "apiToken",
+               "description": ""
+            },
+            {
+               "schema_item": "amount",
+               "schema_value": "amount",
+               "type": "input",
+               "label": "amount",
+               "description": ""
+            },
+            {
+               "schema_item": "limit",
+               "schema_value": "limit",
+               "type": "input",
+               "label": "limit",
+               "description": ""
+            },
+            {
+               "schema_item": "sort",
+               "schema_value": "sort",
+               "type": "input",
+               "label": "sort",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "vuldbGetAdvisoryByDate": {
+         "display_name": "vuldbGetAdvisoryByDate",
+         "className": "_vuldbGetAdvisoryByDate",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiToken",
+               "schema_value": "apiToken",
+               "type": "input",
+               "label": "apiToken",
+               "description": ""
+            },
+            {
+               "schema_item": "value",
+               "schema_value": "value",
+               "type": "input",
+               "label": "value",
+               "description": ""
+            },
+            {
+               "schema_item": "limit",
+               "schema_value": "limit",
+               "type": "input",
+               "label": "limit",
+               "description": ""
+            },
+            {
+               "schema_item": "sort",
+               "schema_value": "sort",
+               "type": "input",
+               "label": "sort",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "vuldbGetCreatedByDate": {
+         "display_name": "vuldbGetCreatedByDate",
+         "className": "_vuldbGetCreatedByDate",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiToken",
+               "schema_value": "apiToken",
+               "type": "input",
+               "label": "apiToken",
+               "description": ""
+            },
+            {
+               "schema_item": "value",
+               "schema_value": "value",
+               "type": "input",
+               "label": "value",
+               "description": ""
+            },
+            {
+               "schema_item": "limit",
+               "schema_value": "limit",
+               "type": "input",
+               "label": "limit",
+               "description": ""
+            },
+            {
+               "schema_item": "sort",
+               "schema_value": "sort",
+               "type": "input",
+               "label": "sort",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "vuldbGetUpdatesByDate": {
+         "display_name": "vuldbGetUpdatesByDate",
+         "className": "_vuldbGetUpdatesByDate",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiToken",
+               "schema_value": "apiToken",
+               "type": "input",
+               "label": "apiToken",
+               "description": ""
+            },
+            {
+               "schema_item": "value",
+               "schema_value": "value",
+               "type": "input",
+               "label": "value",
+               "description": ""
+            },
+            {
+               "schema_item": "limit",
+               "schema_value": "limit",
+               "type": "input",
+               "label": "limit",
+               "description": ""
+            },
+            {
+               "schema_item": "sort",
+               "schema_value": "sort",
+               "type": "input",
+               "label": "sort",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "vuldbSearch": {
+         "display_name": "vuldbSearch",
+         "className": "_vuldbSearch",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiToken",
+               "schema_value": "apiToken",
+               "type": "input",
+               "label": "apiToken",
+               "description": ""
+            },
+            {
+               "schema_item": "searchQuery",
+               "schema_value": "searchQuery",
+               "type": "input",
+               "label": "searchQuery",
+               "description": ""
+            },
+            {
+               "schema_item": "limit",
+               "schema_value": "limit",
+               "type": "input",
+               "label": "limit",
+               "description": ""
+            },
+            {
+               "schema_item": "sort",
+               "schema_value": "sort",
+               "type": "input",
+               "label": "sort",
+               "description": ""
+            },
+            {
+               "schema_item": "details",
+               "schema_value": "details",
+               "type": "checkbox",
+               "label": "details",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "vuldbAdvancedSearch": {
+         "display_name": "vuldbAdvancedSearch",
+         "className": "_vuldbAdvancedSearch",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiToken",
+               "schema_value": "apiToken",
+               "type": "input",
+               "label": "apiToken",
+               "description": ""
+            },
+            {
+               "schema_item": "searchQuery",
+               "schema_value": "searchQuery",
+               "type": "input",
+               "label": "searchQuery",
+               "description": ""
+            },
+            {
+               "schema_item": "limit",
+               "schema_value": "limit",
+               "type": "input",
+               "label": "limit",
+               "description": ""
+            },
+            {
+               "schema_item": "sort",
+               "schema_value": "sort",
+               "type": "input",
+               "label": "sort",
+               "description": ""
+            },
+            {
+               "schema_item": "details",
+               "schema_value": "details",
+               "type": "checkbox",
+               "label": "details",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "vuldbGetCollection": {
+         "display_name": "vuldbGetCollection",
+         "className": "_vuldbGetCollection",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiToken",
+               "schema_value": "apiToken",
+               "type": "input",
+               "label": "apiToken",
+               "description": ""
+            },
+            {
+               "schema_item": "collection",
+               "schema_value": "collection",
+               "type": "input",
+               "label": "collection",
+               "description": ""
+            },
+            {
+               "schema_item": "limit",
+               "schema_value": "limit",
+               "type": "input",
+               "label": "limit",
+               "description": ""
+            },
+            {
+               "schema_item": "sort",
+               "schema_value": "sort",
+               "type": "input",
+               "label": "sort",
+               "description": ""
+            },
+            {
+               "schema_item": "details",
+               "schema_value": "details",
+               "type": "checkbox",
+               "label": "details",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      }
+   },
+   "settings": {}
+}
